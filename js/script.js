@@ -6,3 +6,27 @@
 //      (non 0 oppure 1 oppure 2 oppure ecc.. tipici degli array), del nuovo utente inserito sopra 
 //      all'interno dell'array, dopo l'ordinamento alfabetico
 
+
+
+// array con lista cognomi
+var nomeList = ['bianchi', 'neri', 'rossi', 'verdi', 'gialli'];
+console.log('array iniziale: ' + nomeList);
+
+// 1 - chiedo cognome utente e verifico che non sia stringa vuota
+do {
+    var cognome = prompt("Inserisci il tuo nome").toLowerCase().trim();
+} while (cognome === '');
+console.log('Cognome inserito: ' + cognome)
+
+// 2 - inserisco cognome in array
+nomeList.push(cognome)
+console.log('nuova array: ' + nomeList);
+
+// 3 - ordino e stampo array in ordine alfabetico
+nomeList.sort();
+console.log('array ordinata alfabeticamente: ' + nomeList);
+
+// 4 - stampo posizione 'umana' del cognome che ho inserito nell array ordinata
+var pos = nomeList.indexOf(cognome);
+pos += 1;
+console.log('posizione: ' + pos);
