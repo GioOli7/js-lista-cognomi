@@ -30,3 +30,14 @@ console.log('array ordinata alfabeticamente: ' + nomeList);
 var pos = nomeList.indexOf(cognome);
 pos += 1;
 console.log('posizione: ' + pos);
+
+// inserisco la lista cognomi in HTML
+var items = '';
+
+for (var i = 0; i < nomeList.length; i++) {
+    items += '<li>' + nomeList[i] + '</li>';
+}
+document.getElementById('surname_list').innerHTML = items;
+
+// inserisco la posizione dell elemento in HTML
+document.getElementById('element_pos').innerHTML = pos;
